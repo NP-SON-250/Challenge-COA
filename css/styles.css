@@ -1,0 +1,112 @@
+/* Style for the body element to center content both horizontally and vertically */
+body {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-family: "Poppins"; 
+    margin: 0; 
+    padding: 0;
+    background-color: black; 
+    min-height: 100vh; 
+  }
+  
+  /* Style for the gallery container */
+  .gallery {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    gap: 2px; 
+  }
+  
+  /* Style for each gallery item */
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    width: 293px; 
+    height: 550px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s, filter 0.3s; 
+  }
+  
+  /* Style for the images inside gallery items */
+  .gallery-item img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s, filter 0.3s; 
+  }
+  
+  /* Style for the title (h1) and paragraph (p) inside gallery items */
+  .gallery-item h1,
+  .gallery-item p {
+    position: absolute;
+    left: 10px;
+    margin: 0; 
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s; 
+  }
+  
+  /* Additional styling for the title (h1) */
+  .gallery-item h1 {
+    bottom: 60px; 
+    text-transform: uppercase;
+    font-size: 26px; 
+  }
+  
+  /* Additional styling for the paragraph (p) */
+  .gallery-item p {
+    bottom: 30px;
+    text-transform: capitalize; 
+    color: gray;
+  }
+  
+  /* Style for the hidden link */
+  
+  .gallery-item .hidden-link {
+    display: none; 
+    position: absolute; 
+    bottom: 10px;
+    left: 10px; 
+    color: cyan; 
+    text-decoration: none;
+    font-size: 14px; 
+    padding: 5px;
+  }
+  
+  
+  /* Hover effects for gallery items */
+  .gallery-item:hover img {
+    filter: brightness(0.1);
+    transform: scale(1.1);
+  }
+  
+  /* Hover effects for the title (h1) and paragraph (p) */
+  .gallery-item:hover h1,
+  .gallery-item:hover p {
+    /* Move up */
+    transform: translateY(-25px); 
+  }
+  
+  /* Media query for devices with max-width of 1219px */
+  @media (max-width: 1219px) {
+    .gallery {
+        width: auto; 
+        height: auto; 
+    }
+    .gallery-item {
+        width: 98.5px; 
+        height: 600px; 
+    }
+    /* Hide text elements and hidden link on smaller screens */
+    .gallery-item h1,
+    .gallery-item p,
+    .gallery-item:hover .hidden-link {
+        display: none; 
+    }
+    /* Ensure hidden link stays hidden even on hover */
+    .gallery-item:hover .hidden-link {
+        display: none !important; 
+    }
+  }
+
