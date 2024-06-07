@@ -97,6 +97,7 @@ body {
     .gallery-item {
         width: 98.5px; 
         height: 600px; 
+        margin-top: 20px;
     }
     /* Hide text elements and hidden link on smaller screens */
     .gallery-item h1,
@@ -137,6 +138,7 @@ button {
   color: white;
   font-size: 14px;
   border-radius: 4px;
+  margin-bottom: 20px;
   cursor: pointer;
 }
 button:hover {

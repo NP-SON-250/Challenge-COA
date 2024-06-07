@@ -7,6 +7,25 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
+    <div
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        color: white;
+        background: #007bff;
+        position: absolute;
+        top: 0;
+        left: 0;
+      "
+      title="Index"
+      onclick="window.location='../index.html'"
+    >
+      <i class="fas fa-arrow-left"></i>
+    </div>
     <div class="container">
       <h1>Subarray Sum Checker</h1>
       <input
@@ -22,7 +41,11 @@
       <button onclick="checkSubarraySum()">Check subarray existance</button>
       <div class="result" id="result"></div>
     </div>
-
+    <!-- FontAwesome script for icons -->
+    <script
+      src="https://kit.fontawesome.com/4d0e8d903f.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="../js/arrayMap.js"></script>
   </body>
 </html>
